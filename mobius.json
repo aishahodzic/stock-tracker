@@ -1,0 +1,26 @@
+{
+  "id": "stock-tracker",
+  "name": "Stock Tracker",
+  "version": "1.0.0",
+  "description": "Indices, stocks and commodities with earnings, macro events, analyst estimates, financials and news on the chart.",
+  "entry": "index.jsx",
+  "icon": "icon.png",
+  "offline_capable": false,
+  "permissions": {},
+  "schedule": {
+    "default": "15 22 * * *",
+    "user_configurable": true,
+    "job": "fetch.py"
+  },
+  "static_assets": {"brand/icon.png": "icon.png"},
+  "store": {
+    "tagline": "Indices, stocks and commodities with earnings, macro events and news on the chart.",
+    "description": "Market dashboard for 5 indices, 20 large-cap US stocks and 6 commodities.\n\n• Line or candle charts from 1D to Max, with pinch and trackpad zoom\n• Earnings, ex-dividend dates and macro releases (FOMC, CPI, GDP, BoE, ECB, OPEC) on the date axis; tap for details\n• The three most important news stories of the month on the chart (FT, Reuters, Bloomberg, WSJ, CNBC and more)\n• Earnings history with SEC filings, estimate vs reported EPS and analyst forecast ranges\n• Revenue, net income, margins, debt/equity and ratios\n• Optional Trading 212 portfolio view\n\nRefreshes daily from free public data sources (CNBC, Nasdaq, SEC EDGAR, Google News). Not investment advice.",
+    "screenshots": [
+      {"src": "static/store/stock-tracker-markets.png", "alt": "Stocks list with one-year sparklines, prices, returns and next earnings dates.", "label": "Markets at a glance"},
+      {"src": "static/store/stock-tracker-chart.png", "alt": "Apple six-month candlestick chart with the upcoming earnings date selected, showing its date line, price line and details.", "label": "Events on the chart"},
+      {"src": "static/store/stock-tracker-earnings.png", "alt": "Apple earnings history table and a chart of reported EPS against analyst consensus and forecast ranges.", "label": "Earnings and forecasts"}
+    ]
+  },
+  "source_files": ["theme.js", "format.js", "ui/PriceChart.jsx", "ui/Detail.jsx", "ui/Dashboard.jsx", "ui/Portfolio.jsx", "ui/TradeChart.jsx"]
+}
